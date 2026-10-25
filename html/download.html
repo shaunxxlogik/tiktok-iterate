@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../icons/favicon/tik-iterate-favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="../css/download.css">
+        <link rel="stylesheet" href="../css/shared.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Tik-Iterate:Download</title>
+    </head>
+
+    <body>
+        <nav id="webname">
+            <img class="logo" src="../icons/logo/tik-iterate-logo-light.svg" alt="Website logo.">
+            <h1 class="name">Tik-Iterate</h1> <!--The Title of the page-->
+        </nav>
+
+        <main>
+            <section>
+                <button class="btn rtnbtn" id="download-again">Home <i class="fa-solid fa-bars"></i></button>
+                <figure>
+                    <img src="" class="thumbnail" id="video-thumbnail" alt="">
+                </figure>
+                <span id="video-caption">Thumbnail caption</span>
+            </section>
+
+            <section>
+                <!--Download Buttons-->
+                <button class="btn prg" id="hd-btn">hd quality <i class="fa-solid fa-tv"></i></button>
+                <button class="btn prg" id="Watermark-btn">No watermark<i class="fa-solid fa-droplet-slash"></i></button>
+                <button class="btn prg" id="mp3-btn">mp3 <i class="fa-solid fa-music"></i></button>
+            </section>
+        </main>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer">
+                        <div class="footer-heading footer1">
+                            <h2 class="footerheading">Authorship</h2>
+                            <a class="footertext">MLShawn</a><a class="footertext">VK</a>
+                        </div>
+
+                        <div class="footer-heading footer2">
+                            <h2 class="footerheading">Tech Attribution</h2>
+                            <a class="footertext">Powered by TikWM API</a>
+                        </div>
+
+                        <div class="footer-heading footer3">
+                            <h2 class="footerheading">Disclaimer</h2>
+                            <a class="footertext">Not affiliated with TikTok</a>
+                            <a class="footertext">For personal use only.</a>
+                        </div>
+
+                        <div class="footer-heading footer4">
+                            <h2 class="footerheading">Copy Right</h2>
+                            <a class="footertext">&copy;2026 Tik-Iterate, All Rights Reserved</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        <script>
+            const downloadAgain = document.getElementById("download-again");
+            downloadAgain.addEventListener("click", function () {
+                window.location.href = "index.html";
+            });
+
+            const storedData = localStorage.getItem("tiktokVideoData"); // Getting the VideoData from LocalStorage
+
+            if (!storedData) {
+                window.location.href = "index.html";
+            } else {
+                const videoData = JSON.parse(storedData); // SInce the data was converted to a string to store in local storage, we're converting it back to useable data
+
+                // Displaying the video data on the page
+                const thumbnail = document.getElementById("video-thumbnail");
+                const caption = document.getElementById("video-caption");
+
+                thumbnail.src = videoData.cover;
+                thumbnail.alt = videoData.title;
+                caption.textContent = videoData.title;
+
+                async function downloadFile(fileUrl, fileName) {
+                    const response = await fetch(fileUrl);
+                    const blob = await response.blob();
+                    const blobUrl = URL.createObjectURL(blob);
+
+                    // creates an 'a' element for download
+                    const tempLink = document.createElement("a");
+                    tempLink.href = blobUrl;
+                    tempLink.download = fileName;
+
+                    // calls, uses, and removes the element
+                    document.body.appendChild(tempLink);
+                    tempLink.click();
+                    document.body.removeChild(tempLink);
+
+                    URL.revokeObjectURL(blobUrl);
+                }
+
+                // DOwnloading the files through an event listener And using the downloadFile function
+                const hdBtn = document.getElementById("hd-btn");
+                const watermarkBtn = document.getElementById("Watermark-btn");
+                const mp3Btn = document.getElementById("mp3-btn");
+
+                hdBtn.addEventListener("click", function () {
+                    downloadFile(videoData.hdplay, videoData.title);
+                });
+
+                watermarkBtn.addEventListener("click", function () {
+                    downloadFile(videoData.play, videoData.title);
+                });
+
+                mp3Btn.addEventListener("click", function () {
+                    downloadFile(videoData.music, videoData.title);
+                });
+            }
+        </script>
+    </body>
+
+</html>

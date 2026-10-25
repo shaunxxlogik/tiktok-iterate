@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/error.css"> 
+        <link rel="stylesheet" href="../css/shared.css">
+        <link rel="shortcut icon" href="../icons/favicon/tik-iterate-favicon.svg" type="image/x-icon">
+        <title>Tik-Iterate:Error</title>
+    </head>
+        <body>
+            <nav id="webname">
+                    <img class="logo" src="../icons/logo/tik-iterate-logo-light.svg" alt="Website logo.">
+                    <h1 class="name">Tik-Iterate</h1> <!--The Title of the page-->
+            </nav>
+            <header>
+                <h2>Error!</h2>
+                
+                <figure>
+                    <img src="../icons/Error-Image/undraw_warning_tl76.svg" alt="Illustration of a man tripping on a wet floor">
+                </figure>
+            </header>
+
+            <main>
+                <p>What could have gone wrong?</p>
+                <ul>
+                    <li>The URL may be Incomplete or not supported:<a>Check link and try again.</a></li>
+                    <li>The video may be have been removed, restricted,or made private:<a>Check that the video is accessible</a></li>
+                    <li>The request may have not reached the service:<a>Check your connection and retry.</a></li>
+                </ul>
+
+                <button class="btn" id="return-button">Try Again</button>
+            </main>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer">
+                        <div class="footer-heading footer1">
+                            <h2 class="footerheading">Authorship</h2>
+                            <a class="footertext">MLShawn</a><a class="footertext">VK</a>
+                        </div>
+
+                        <div class="footer-heading footer2">
+                            <h2 class="footerheading">Tech Attribution</h2>
+                            <a class="footertext">Powered by TikWM API</a>
+                        </div>
+
+                        <div class="footer-heading footer3">
+                            <h2 class="footerheading">Disclaimer</h2>
+                            <a class="footertext">Not affiliated with TikTok</a>
+                            <a class="footertext">For personal use only.</a>
+                        </div>
+
+                        <div class="footer-heading footer4">
+                            <h2 class="footerheading">Copy Right</h2>
+                            <a class="footertext">&copy;2026 Tik-Iterate, All Rights Reserved</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <script>
+                const ReturnBtn = document.getElementById("return-button");
+
+                ReturnBtn.addEventListener("click", function (event) {
+                    window.location.href = "index.html";
+                })
+
+                // Displaying the error message on the console
+
+                msgError = localStorage.getItem("tiktokError");
+                console.log(msgError);
+            </script>
+        
+        </body>
+</html>

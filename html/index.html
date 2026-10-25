@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta property="og:title" content="Tik-iterate | TikTok Downloader">
+            <meta property="og:desription" content="Download TikTok videos with Tik-iterate.">
+            <meta property="og:image" content="https://tiktok-iterate.netlify.app/icons/logo/tik-iterate-logo-light.svg">
+            <meta property="og:url" content="https://tiktok-iterate.netlify.app/">
+            <meta property="og:type" content="website">
+            <link rel="shortcut icon" href="../icons/favicon/tik-iterate-favicon.svg" type="image/x-icon">
+            <link rel="stylesheet" href="../css/index-main.css">
+            <link rel="stylesheet" href="../css/shared.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Tik-Iterate</title>
+        </head>
+        <body>
+            <nav id="webname">
+                <img class="logo" src="../icons/logo/tik-iterate-logo-light.svg" alt="Website logo.">
+                <h1 class="name">Tik-Iterate</h1> <!--The Title of the page-->
+            </nav>
+                    
+            <header class="form-position">
+                <!--form to fetch the url-->
+                <form  id="tiktokForm">
+                    <input type="url" id="user-input" placeholder="paste url here" required>
+                    <button type="submit" id="downloadBtn" class="downloadBtn">Download<i class="fa-solid fa-circle-down"></i></button>
+                </form>
+            </header>
+                    
+            <main>
+                <section id="Information">
+                    <div class="card card1">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+                                <circle cx="24" cy="24" r="24" fill="#471bad"/>
+                                <text x="24" y="24" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle" dominant-baseline="central">1</text>
+                            </svg>
+                        </i>
+                        <h2 class="title">Copy URL on Tiktok</h2>
+                                
+                        <figure class="figure">
+                            <img src="../icons/undraw_share-link_y9oh.svg" class="image" alt="tiktok illustration">
+                        </figure>
+
+                        <p>
+                            Copy the link to the TikTok video you want to download. Open TikTok, tap Share, then select Copy link.
+                        </p>
+                        <hr>
+                        <p class="tip">
+                            Quick tip: Make sure you copy the video link, not the creator's profile link.
+                        </p>
+                    </div> 
+
+                    <div class="card card2">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+                                <circle cx="24" cy="24" r="24" fill="#471bad"/>
+                                <text x="24" y="24" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle" dominant-baseline="central">2</text>
+                            </svg>
+                        </i>
+                        <h2 class="title">Paste your URL</h2>
+                        <figure class="figure">
+                            <img class="image" src="../icons/undraw_fill-the-blanks_lxuz.svg" alt="an illustration showing data on a web app">
+                        </figure>
+
+                        <p>
+                            Return to Tik-Iterate and paste the copied URL into the input field above. Click Download to process your link.
+                        </p>
+                        <hr>
+                        <p class="tip">
+                            Quick tip: Double-check that the URL was pasted correctly before continuing.
+                        </p>
+                    </div>
+
+                    <div class="card card3">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+                                <circle cx="24" cy="24" r="24" fill="#471bad"/>
+                                <text x="24" y="24" fill="#ffffff" font-size="26" font-weight="bold" text-anchor="middle" dominant-baseline="central">3</text>
+                            </svg>
+                        </i>
+                        <h2 class="title">Choose and download</h2>
+                        <figure class="figure">
+                            <img class="image" src="../icons/undraw_download_sa8g.svg" alt="an illustration of a man watching a phone that is displaying a download button">
+                        </figure>
+
+                        <p>
+                            Once your link has been processed, choose an available download format and save the video to your device.
+                        </p>
+                        <hr>
+                        <p class="tip">
+                            Quick tip: Check your Downloads folder if you cannot find the saved video.
+                        </p>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer">
+                        <div class="footer-heading footer1">
+                            <h2 class="footerheading">Authorship</h2>
+                            <a class="footertext">MLShawn</a><a class="footertext">VK</a>
+                        </div>
+
+                        <div class="footer-heading footer2">
+                            <h2 class="footerheading">Tech Attribution</h2>
+                            <a class="footertext">Powered by TikWM API</a>
+                        </div>
+
+                        <div class="footer-heading footer3">
+                            <h2 class="footerheading">Disclaimer</h2>
+                            <a class="footertext">Not affiliated with TikTok</a>
+                            <a class="footertext">For personal use only.</a>
+                        </div>
+
+                        <div class="footer-heading footer4">
+                            <h2 class="footerheading">Copy Right</h2>
+                            <a class="footertext">&copy;2026 Tik-Iterate, All Rights Reserved</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <script>
+                const tiktokForm = document.getElementById("tiktokForm");
+                const downloadBtn= document.getElementById("downloadBtn")
+
+                tiktokForm.addEventListener("submit", async function (event) {
+                    event.preventDefault();
+
+                    downloadBtn.disabled = true; //prevents another click while the request is being processed.
+                    downloadBtn.textContent = "Processing..."; //changes the visible button label.
+
+                    const linkInput = document.getElementById("user-input");
+                    const rawInput = linkInput.value;
+                    const tiktokUrl = rawInput.split("?")[0];
+
+                    try {
+                        const apiUrl = "https://www.tikwm.com/api/?url=" + encodeURIComponent(tiktokUrl) + "&hd=1";
+                        const response = await fetch(apiUrl);
+
+                        if (!response.ok) {
+                            throw new Error(`Request failed: HTTP ${response.status}`); //catches HTTP failures before trying to parse the response
+                        }
+
+                        let result; // creates a variable that can be declared later
+
+                        try {
+                            result = await response.json();
+                        } catch {
+                            throw new Error("The server returned an invalid response. Please try again.");
+                        }
+                        // 1. Check TikWM's API status
+                        if (result.code !== 0) {
+                            if (result.msg && result.msg.includes("URl parsing")) {
+                            throw new Error(result.msg || "That link couldn't be passed. Try copying it fresh from TIkTok and paste it again.");
+                            }
+                            throw new Error(result.msg || "We couldn't fetch that video.");
+                        }
+                        
+                        // 2. Check whether video data exists
+                        if (!result.data || typeof result.data !== "object") {
+                            throw new Error("The server returned incomplete video data. Please try again.");
+                        }
+
+                        // 3. Build the videoData object
+                                const videoData = {
+                                    title: result.data.title || "TikTok video",
+                                    cover: result.data.cover || "",
+                                    hdplay: result.data.hdplay || "",
+                                    play: result.data.play || "",
+                                    music: result.data.music || ""
+                                };
+
+                                if (!videoData.hdplay && !videoData.play && !videoData.music) {
+                                    throw new Error("No downloadable video or audio formats were found for this link.");
+                                }
+
+                                localStorage.setItem("tiktokVideoData", JSON.stringify(videoData));
+                                localStorage.removeItem("tiktokError");
+                                window.location.href = "download.html";
+                            }
+
+                            catch (error) {
+                                localStorage.setItem("tiktokError", error.message);
+                                window.location.href = "error.html";
+                                console.log(error.message)
+                            }
+                            
+                        })
+
+                        
+
+            </script>
+        </body>
+    </html>

@@ -1,0 +1,114 @@
+/* ------------------------------------------------------
+   Global rules
+   -----------------------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --backgroundBtn: #471bad;
+    --backgroundBtn-hover: #2c0b7a;
+    --border: #6C63FF;
+    --background: #222222;
+    --background-light: #fff;
+}
+
+/* ------------------------------------------------------
+   Header section 
+   -----------------------------------------------------*/
+
+header {
+    width: 100%;
+}
+
+#webname {
+    /* Sticky properties: Important*/
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    /* Structure */
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Space */
+    margin-bottom: 1em;
+
+    /* Color */
+    background-color: var(--background-light) ;
+
+    /* Blur effect */
+    box-shadow: 3px 0px 3px grey;
+}
+
+.name {
+    /*The look*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(10px, 50px, 100px);
+    margin-bottom: 1.5%;
+
+    letter-spacing: 0.5px;
+
+    background: linear-gradient(90deg, #6C63FF, #FF6584);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+/* ------------------------------------------------------
+   Body section 
+   -----------------------------------------------------*/
+
+/* ------------------------------------------------------
+   Footer section 
+   -----------------------------------------------------*/
+
+.footer-container {
+    background-color: #181818;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.footer {
+    height: 50vh;
+    color:#fff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+}
+
+.footer > div { /* Making the divs perfect controlable squares*/
+    flex: 1;
+    aspect-ratio: 1/1;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerheading {
+    margin-bottom: 1rem;
+}
+
+.footer-heading a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#969595;
+    cursor: pointer;
+    transition: all 0.5s ease;
+} 
+
+.footer-heading a:hover {
+    color: var(--backgroundBtn);
+    padding-left: 1rem;
+}

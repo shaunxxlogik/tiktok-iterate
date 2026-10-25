@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundBtn: #471bad;
+    --backgroundBtn-hover: #2c0b7a;
+    --border: #6C63FF;
+    --background: #222222;
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 1em 0 0 0;
+}
+
+.name {
+    /*The look*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(10px, 50px, 100px);
+    margin-bottom: 1.5%;
+
+    letter-spacing: 0.5px;
+
+    background: linear-gradient(90deg, #6C63FF, #FF6584);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0 auto;
+    width: 100%;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 3%;
+}
+
+.btn {
+    /*controlling the inside of the button*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 4px;
+
+    font-size: large;
+    text-transform: uppercase;
+
+    width: 50%;
+    min-height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundBtn);
+    color: beige;
+    cursor: pointer;
+    transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+
+    gap: 5px;
+    margin: 1em 0;
+
+    position: relative;
+    box-shadow: 0 10px var(--backgroundBtn-hover);
+}
+
+.btn:hover {
+    box-shadow: 0 8px var(--backgroundBtn-hover);
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: 0 0 var(--backgroundBtn-hover);
+    top: 10px;
+}
+
+.btn i {
+    margin-right: 3px;
+    margin-left: 5px;
+}
+
+.image {
+    min-width: 50px;
+    max-width: 150px;
+    min-height: 50px;
+    max-height: 150px;
+}
+
+.thumbnail {
+    /*1 Fluid sizing*/
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    /*2 lock aspect-ratio*/
+    aspect-ratio: 1 / 1;
+    margin: 1em 0 0 0;
+    overflow: hidden;
+    /*3 Crop/Fit behaviour*/
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid var(--backgroundBtn);
+    border-radius: 5%;
+
+    box-shadow: 0.5em 0.5em 10px var(--backgroundBtn-hover);
+
+    transition: all 250ms ease 0s;
+}
+
+#video-caption {
+    display: none; /*Temporarily hidden to users until the next update*/
+    margin: 10px 0;
+    
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: var(--font);
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .btn {
+        width: 65%;
+    }
+}

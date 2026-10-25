@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tik-Iterate">
+  <rect width="64" height="64" rx="14" fill="#050505"/>
+  <!-- Bold T with a download-arrow stem -->
+  <path d="M12 13H52L45 22H36V39L27 49L18 39H27V22H19Z" fill="#FFFFFF"/>
+  <!-- Purple play mark, kept simple for small favicon sizes -->
+  <path d="M39 25L50 32L39 39Z" fill="#6B35F5"/>
+</svg>

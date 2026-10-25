@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Tik-Iterate logo for light backgrounds</title>
+  <rect width="512" height="512" fill="#FFFFFF"/>
+  <path d="M105 126H404L353 184H288V336L256 389L207 336H239V184H156Z" fill="#08080B"/>
+  <path d="M300 198L365 245L300 292Z" fill="#6F35F5"/>
+  <path d="M224 260C177 281 146 312 151 342C155 367 183 383 221 385L255 418C183 421 122 399 106 359C88 314 140 267 224 260Z" fill="#6F35F5"/>
+  <path d="M319 192C374 207 410 235 410 265C410 294 374 319 318 331C359 310 381 288 381 265C381 241 359 215 319 192Z" fill="#6F35F5"/>
+</svg>
