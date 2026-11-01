@@ -1,34 +1,53 @@
 <!DOCTYPE html>
     <html lang="en">
+        
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta property="og:title" content="Tik-iterate | TikTok Downloader">
-            <meta property="og:desription" content="Download TikTok videos with Tik-iterate.">
-            <meta property="og:image" content="https://tiktok-iterate.netlify.app/icons/logo/tik-iterate-logo-light.svg">
-            <meta property="og:url" content="https://tiktok-iterate.netlify.app/">
+
+            <title>TikTok Video Downloader - Tik-Iterate</title>
+
+            <meta name="description" content="Download TikTok videos online with Tik-Iterate. Paste a video link, choose an available format and download without creating an account.">
+
+            <meta name="robots" content="index, follow">
+
+            <link rel="canonical" href="https://tiktok-iterate.com/">
+
+            <!-- Open Graph -->
+            <meta property="og:title" content="TikTok Video Downloader - Tik-Iterate">
+            <meta property="og:description" content="Download TikTok videos online. Paste a link, choose your format and get started with Tik-Iterate.">
+            <meta property="og:image" content="https://tiktok-iterate.com/icons/logo/tik-iterate-logo-light.svg">
+            <meta property="og:url" content="https://tiktok-iterate.com/">
             <meta property="og:type" content="website">
-            <link rel="shortcut icon" href="./icons/favicon/tik-iterate-favicon.svg" type="image/x-icon">
+            <meta property="og:site_name" content="Tik-Iterate">
+
+            <!-- Favicon -->
+            <link rel="icon" href="./icons/favicon/tik-iterate-favicon.svg" type="image/svg+xml">
+
+            <!-- Stylesheets -->
             <link rel="stylesheet" href="./css/index-main.css">
             <link rel="stylesheet" href="./css/shared.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Tik-Iterate</title>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer">
         </head>
+
         <body>
             <nav id="webname">
-                <img class="logo" src="./icons/logo/tik-iterate-logo-light.svg" alt="Website logo.">
-                <h1 class="name">Tik-Iterate</h1> <!--The Title of the page-->
+                <img class="logo" src="./icons/logo/tik-iterate-logo-light.svg" alt="Tik-iterate logo.">
+                <span class="name">Tik-Iterate</span> <!--The Title of the page-->
             </nav>
                     
             <header class="form-position">
                 <!--form to fetch the url-->
                 <form  id="tiktokForm">
-                    <input type="url" id="user-input" placeholder="paste url here" required>
+                    <label for="user-input" class="visually-hidden">TikTok Video URL</label>
+                    <input type="url" id="user-input" placeholder="Paste TikTok video URL here" required>
                     <button type="submit" id="downloadBtn" class="downloadBtn">Download<i class="fa-solid fa-circle-down"></i></button>
                 </form>
             </header>
                     
             <main>
+                <h1 class="main-heading">TikTok Video Downloader</h1>
                 <section id="Information">
                     <div class="card card1">
                         <i>

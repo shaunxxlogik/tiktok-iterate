@@ -5,6 +5,22 @@
     --background: #1b1b1b;
 }
 
+.main-heading {
+    /*The look*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+
+    letter-spacing: 0.5px;
+
+    background: linear-gradient(90deg, #6C63FF, #FF6584);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 #tiktokForm,.form-position {
     display: flex;
     flex-direction: column;
@@ -12,6 +28,14 @@
     align-items: center;
 
     width: 99%;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .downloadBtn {
@@ -68,10 +92,11 @@
 }
 
 #Information {
+    width: 99%;
 
     display: grid;
     grid-row: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
 
     padding: 3em 0 3em 0;
@@ -103,8 +128,9 @@
 }
 
 .image{
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
 }
 
 .tip {
@@ -145,9 +171,15 @@ p {
 @media (max-width:900px) {
 
     #Information {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .card {
+        transform: scale(0.9);
+        margin: 0 auto;
+    }
 }
