@@ -108,6 +108,13 @@ main{
 
 }
 
+.position {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .card {
     display: flow-root;
     width: 350px;
