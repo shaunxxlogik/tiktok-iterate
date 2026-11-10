@@ -85,23 +85,19 @@ header {
    -----------------------------------------------------*/
 
 .footer-container {
-    background-color: #181818;
-    padding: 1rem;
+    background-color:var(--backgroundBtn-hover);
     margin-top: 3rem;
 }
 
 .footer {
-    height: 50vh;
-    color:#fff;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
     margin: auto;
 
-}
-
-.footer > div { /* Making the divs perfect controlable squares*/
-    flex: 1;
-    aspect-ratio: 1/1;
+    height: 50vh;
+    color:#fff;
 }
 
 .footer-heading {
@@ -113,14 +109,30 @@ header {
     margin-bottom: 1rem;
 }
 
-.footer-heading a {
+.footertext {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:#969595;
     cursor: pointer;
     transition: all 0.5s ease;
 } 
 
-.footer-heading a:hover {
-    color: var(--backgroundBtn);
-    padding-left: 1rem;
+@media (max-width: 959px) {
+    .footer {
+        grid-template-rows: repeat(2, 10em);
+        row-gap: 1 em;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1em;
+
+        height: auto;
+        padding-top: 2em;
+    }
+}
+
+@media (max-width:768px) {
+    .footerheading {
+        font-size: 1.1em;
+    }
+    .footertext {
+    font-size: 0.9em;
+    } 
 }
