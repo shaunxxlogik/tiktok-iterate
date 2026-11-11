@@ -1,0 +1,9 @@
+11-Nov-26
+
+I don't know why I didn't think of this before, I want to document my progress from now on. 
+The project is already launched and working, just fixes here and there. Today I was doing a rebranding,
+I realised how dangerous it is to use key words like "TikTok" in the website's name and domain.
+We are not affeliated with TikTok and the website's theme contradicated that, alongside the logo,
+we had which looked close to TikTok. We changed our name to "dravio", when we have accumulated enough
+funds we'll change domains and do a 301 permanent redirect, from tiktok-iterate.com --> (something)@dravio.(something).
+It depends on available domains. Signing off.

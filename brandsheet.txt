@@ -1,0 +1,27 @@
+Colours:
+Primary Purple: #5B21B6 - Buttons, links, highlights
+Deep Purple: #4C1D95 - Gradient start, logo dark side
+Dark Background: #0F0A1E - Site header / hero
+OG Gradient: #1E0A3C to #4C1D95 - OG image background
+Charcoal Text: #1F1F1F - Light mode dravio wordmark
+White: #FFFFFF - Dark mode dravio wordmark
+
+Logo gradient: #4C1D95 -> #7C3AED
+
+Fonts:
+Wordmark: Rounded sans, lowercase, bold - Nunito / Quicksand / Poppins Rounded
+Site text: Same rounded font for headings, clean sans for body
+Always write: dravio (lowercase) - never Dravio or DRAVIO
+
+Logo Files:
+- Main logo - V1 on white
+- Light header - purple dragon + charcoal dravio on white
+- Dark header - purple dragon + white dravio on #0F0A1E
+- Favicon - icon only, export at 512x512 PNG
+- OG Image - 1200x630 JPG
+
+Rules:
+- Don't use pink. Ever.
+- Don't stretch the logo
+- Don't put purple logo on purple background - use white or dark version
+- Keep lots of white space around it

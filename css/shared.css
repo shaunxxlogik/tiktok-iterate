@@ -7,11 +7,15 @@
 }
 
 :root {
-    --backgroundBtn: #471bad;
-    --backgroundBtn-hover: #2c0b7a;
-    --border: #6C63FF;
-    --background: #222222;
-    --background-light: #fff;
+    --primary-purple: #5B21B6; /* - Buttons, links, highlights*/
+    --deep-purple: #4C1D95; /* Gradient start, logo dark side*/
+    --dark-background: #0F0A1E; /* - Site header or hero*/
+    --gradient: linear-gradient(90deg,#1E0A3C, #4C1D95); /*- OG image background*/
+    --charcoal-text: #1F1F1F; /*- Light mode dravio wordmark*/
+    --white: #FFFFFF; /*- Dark mode dravio wordmark*/
+    --font: Nunito,Rounded sans, lowercase, bold, Quicksand, "Poppins Rounded"; /*- Nunito / Quicksand / Poppins Rounded*/
+    --alert: red; 
+    --safe: green;   
 }
 
 .visually-hidden {
@@ -43,7 +47,7 @@ header {
     /* Structure */
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
@@ -51,7 +55,7 @@ header {
     margin-bottom: 1em;
 
     /* Color */
-    background-color: var(--background-light) ;
+    background-color: var(--white) ;
 
     /* Blur effect */
     box-shadow: 3px 0px 3px grey;
@@ -59,21 +63,21 @@ header {
 
 .name {
     /*The look*/
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font);
     font-weight: 700;
     font-size: clamp(1.1rem, 4vw, 2.5rem);
+    padding: 0.2em 0.5em 0 0;
     margin-bottom: 1.5%;
 
     letter-spacing: 0.5px;
 
-    background: linear-gradient(90deg, #6C63FF, #FF6584);
+    background: var(--gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .logo {
-    width: 64px;
     height: 64px;
 }
 /* ------------------------------------------------------
@@ -85,8 +89,8 @@ header {
    -----------------------------------------------------*/
 
 .footer-container {
-    background-color:var(--backgroundBtn-hover);
-    margin-top: 3rem;
+    background-color:var(--dark-background);
+    margin-top: 3em;
 }
 
 .footer {
@@ -111,7 +115,7 @@ header {
 
 .footertext {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#969595;
+    color:var(--white);
     cursor: pointer;
     transition: all 0.5s ease;
 } 
@@ -119,7 +123,7 @@ header {
 @media (max-width: 959px) {
     .footer {
         grid-template-rows: repeat(2, 10em);
-        row-gap: 1 em;
+        row-gap: 1em;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1em;
 
