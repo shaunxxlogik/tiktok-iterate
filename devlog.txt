@@ -7,3 +7,8 @@ We are not affeliated with TikTok and the website's theme contradicated that, al
 we had which looked close to TikTok. We changed our name to "dravio", when we have accumulated enough
 funds we'll change domains and do a 301 permanent redirect, from tiktok-iterate.com --> (something)@dravio.(something).
 It depends on available domains. Signing off.
+
+13-Nov-26
+
+Moving towards SEO, added a FAQ section and answered the question "What is dravio?" for users who might
+not know what we about. I pushed the code before I updated the devlogand surprisingly the wedsite did not update.
