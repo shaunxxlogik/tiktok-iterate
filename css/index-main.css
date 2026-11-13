@@ -113,6 +113,72 @@ main{
 
 }
 
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+    margin: 1em auto;
+
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: var(--font);
+
+    background-color: whitesmoke;
+}
+
+
+#faq {
+    width: 100%;
+    max-width: 350px;
+
+    margin: 3em 0 3em 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 0.5em;
+    
+}
+
+.title {
+    display: flex;
+    align-self: center;
+
+    padding-bottom: 0.5em;
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: whitesmoke;
+    border-bottom: 0.2em solid var(--deep-purple);
+    border-radius: 5px;
+    font-weight: 600;
+
+    padding: 0.3em 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+details:hover {
+    background-color: #c7c7c7;
+}
+
+summary::marker {
+    content: "";
+}
+
+details > p {
+    text-align: center;
+}
+
 .position {
     display: flex;
     flex-direction: row;
